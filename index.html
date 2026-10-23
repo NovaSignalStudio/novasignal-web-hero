@@ -264,12 +264,6 @@
 .site-footer{border-top:1px solid #ffffff10;padding:26px 0 30px;color:#8f899a;font-size:11px}
 .footer-row{display:flex;align-items:center;justify-content:space-between;gap:24px}.footer-row a:hover{color:#bdf7ee}.footer-row nav{display:flex;gap:25px}
 .scroll-hint{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:12px;font-size:10px;color:#928b9d;letter-spacing:.12em;text-transform:uppercase}.scroll-hint span{font-size:17px;color:#bdf7ee}
-@media(min-width:900px) and (min-height:640px) and (prefers-reduced-motion:no-preference){
-  .project-stack{padding-bottom:8vh}
-  .project{position:sticky;top:64px;margin-bottom:24vh}
-  .project:nth-child(2){top:80px}.project:nth-child(3){top:96px;margin-bottom:0}
-  .project-surface{will-change:transform}
-}
 @media(min-width:900px) and (max-height:760px){.project-body{min-height:400px}.project-sector{margin-bottom:24px}.project-story{padding:28px}.project-topline{padding:15px 28px}.project-story h3{font-size:34px}.project-tags{margin-bottom:18px}.browser-demo{width:calc(100% - 40px)}}
 @media(max-width:1000px),(max-aspect-ratio:7/5){.scroll-hint{position:relative;inset:auto;transform:none;justify-content:center;margin:34px auto 0}.pricing-grid{gap:12px}.price-card{padding:26px 20px}.plan-name-row{flex-wrap:wrap}.price{font-size:44px}}
 @media(max-width:899px){
@@ -279,6 +273,40 @@
   .section-shell{width:calc(100% - 36px)}.section-title{font-size:39px}.section-intro{font-size:14px}.section-kicker{font-size:10px;margin-bottom:20px}.project{margin-bottom:24px}.project-surface{border-radius:18px}.project-story{padding:26px 22px}.project-topline{padding:15px 22px;font-size:9px}.project-story h3{font-size:34px}.project-preview{min-height:270px;margin:0 12px 12px}.browser-demo{width:calc(100% - 22px)}.browser-bar{height:20px;font-size:6px}.demo-nav{padding:12px 14px}.demo-logo{font-size:14px}.demo-nav-links{gap:10px;font-size:6px}.demo-nav-links span:last-child{display:none}.forma-content{padding:8px 14px 16px;min-height:210px;gap:8px}.forma-copy small{font-size:6px;margin:5px 0 15px}.forma-copy h4{font-size:29px}.forma-copy p{font-size:6.5px;margin-bottom:12px}.demo-action{font-size:7px;padding:7px 9px}.demo-bottom{padding:10px 14px;font-size:6px}.oliva-content{min-height:220px;padding:7px 15px 19px}.oliva-content h4{font-size:43px;margin:18px 0}.oliva-content small{font-size:6px}.oliva-demo .demo-logo{font-size:17px}.orbit-content{min-height:215px;padding:10px 15px 16px}.orbit-content h4{font-size:32px;margin:24px 0 12px}.orbit-content small{font-size:6px}.orbit-content p{font-size:6px;width:50%}.orbit-orb{width:175px;height:175px;right:-34px;top:25px}.price-card{padding:28px 24px}.plan-features{display:block}.price-footnote{text-align:left}.preview-callout h3{font-size:26px}.preview-callout .pill{width:100%;white-space:normal;text-align:center}.footer-row nav{gap:18px}
 }
 @media(prefers-reduced-motion:reduce){.project{position:relative!important;top:auto!important;margin-bottom:24px!important}.project-stack{padding-bottom:0}.project-surface,.browser-demo{transform:none!important}.scroll-hint span{animation:none}}
+
+
+/* Native scroll, one perspective stage, three reversible spatial scenes. */
+.project-stage{position:relative}
+.depth-atmosphere,.depth-controls{display:none}
+.project-preview{perspective:1000px}
+.browser-demo{transform-origin:50% 50%;will-change:transform}
+.project-surface{transform-origin:center center}
+.depth-toggle{display:inline-flex;align-items:center;gap:8px;background:none;color:#aaa4b8;border:1px solid #ffffff26;border-radius:30px;padding:9px 13px;font:inherit;font-size:11px;cursor:pointer;margin:20px 0 0}
+.depth-toggle::before{content:'';width:5px;height:5px;border-radius:50%;background:#bdf7ee}
+.depth-toggle:hover{color:white;border-color:#a18aca}
+@media(min-width:900px) and (min-height:640px) and (prefers-reduced-motion:no-preference){
+ .depth-enabled .project-stack{height:var(--journey-height);padding:0}
+ .depth-enabled .project-stage{height:100svh;min-height:640px;position:sticky;top:0;perspective:1600px;isolation:isolate}
+ .depth-enabled .project{position:absolute;top:50%;left:0;width:100%;margin:0;transform-origin:center;will-change:transform,opacity}
+ .depth-enabled .project-surface{box-shadow:0 45px 100px #000a,inset 0 1px #ffffff16;border-color:#ffffff32}
+ .depth-enabled .project-preview{background-color:#17151e}
+ .depth-enabled .depth-atmosphere{display:block;position:absolute;inset:0;pointer-events:none;overflow:clip;z-index:-1}
+ .depth-word{position:absolute;left:0;right:0;top:6%;text-align:center;font-family:'DM Sans',sans-serif;font-size:clamp(90px,12vw,170px);font-weight:380;line-height:1;letter-spacing:-.07em;color:#a48bc419}
+ .depth-halo{position:absolute;inset:10% 5%;background:radial-gradient(ellipse,#7549d42b,transparent 65%)}
+ .depth-ring{position:absolute;inset:12% -7%;border:1px solid #a89bde40;border-radius:50%;transform:rotateX(64deg) rotateZ(-25deg);box-shadow:0 0 45px #7b5de012,inset 0 0 45px #7b5de012}
+ .depth-ring:nth-of-type(2){inset:4% 13%;border-color:#a5e8dc35;transform:rotateY(65deg) rotateZ(30deg)}
+ .depth-spark{position:absolute;left:8%;top:22%;width:42px;height:42px;border:1px solid #bdf7ee77;box-shadow:0 0 24px #bdf7ee22;transform:rotate(35deg)}
+ .depth-spark:nth-of-type(4){left:auto;right:3%;top:70%;width:70px;height:70px;border-color:#997aea88}
+ .depth-enabled .depth-controls{position:absolute;z-index:6;bottom:25px;left:0;right:0;display:flex;align-items:center;justify-content:space-between;gap:20px}
+ .depth-caption{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#9b93ad;display:flex;align-items:center;gap:15px}
+ .depth-caption::before{content:'↓';color:#bdf7ee;font-size:18px}
+ .depth-nav{display:flex;gap:8px;padding:6px;background:#100e18e8;border:1px solid #ffffff20;border-radius:40px}
+ .depth-nav button{background:transparent;border:0;border-radius:30px;color:#938b9f;padding:10px 16px;cursor:pointer;font:inherit;font-size:11px;transition:color .2s,background .2s}
+ .depth-nav button[aria-current=true]{color:#efeaf8;background:#8870c52c}
+ .depth-progress{position:absolute;bottom:-12px;left:0;right:0;height:1px;background:#ffffff12;overflow:hidden}
+ .depth-progress i{display:block;height:100%;background:linear-gradient(90deg,#7f5ed9,#bdf7ee);transform:scaleX(var(--journey-progress,0));transform-origin:left}
+}
+@media(prefers-reduced-motion:reduce){.project,.project-surface,.browser-demo,.price-card{transform:none!important;opacity:1!important;will-change:auto}.depth-toggle{display:none}}
 
   </style>
 </head>
@@ -345,9 +373,10 @@
     <div class="section-shell">
       <div class="section-heading">
         <div><p class="section-kicker">01 — Possibilità, da esplorare</p><h2 class="section-title" id="projects-title">La tua attività.<br><em>Un altro primo impatto.</em></h2></div>
-        <p class="section-intro">Tre direzioni, tre modi di farsi scegliere. Scorri i concept e immagina il tuo brand al loro posto.</p>
+        <p class="section-intro">Tre direzioni, tre modi di farsi scegliere. Entra nei concept e immagina il tuo brand al loro posto.<br><button class="depth-toggle" type="button" aria-pressed="false">Riduci movimento</button></p>
       </div>
-      <div class="project-stack">
+      <div class="project-stack"><div class="project-stage">
+        <div class="depth-atmosphere" aria-hidden="true"><div class="depth-word">OLTRE LO SCHERMO.</div><div class="depth-halo"></div><i class="depth-ring"></i><i class="depth-ring"></i><i class="depth-spark"></i><i class="depth-spark"></i></div>
         <article class="project" id="concept-forma" aria-labelledby="forma-title">
           <div class="project-surface">
             <div class="project-topline"><span><b>01</b> FORMA STUDIO</span><span class="concept-label">Concept NovaSignal</span></div>
@@ -381,7 +410,7 @@
             </div>
           </div>
         </article>
-      </div>
+      <div class="depth-controls"><span class="depth-caption">Scorri. Cambia prospettiva.</span><nav class="depth-nav" aria-label="Esplora i concept"><button type="button" data-scene="0" aria-current="true">01 / Forma</button><button type="button" data-scene="1" aria-current="false">02 / Oliva</button><button type="button" data-scene="2" aria-current="false">03 / Orbit</button></nav><div class="depth-progress" aria-hidden="true"><i></i></div></div></div></div>
       <div class="project-afterword"><span>Concept originali a scopo illustrativo. Il tuo sito parte dalla tua attività, dai tuoi contenuti e dai tuoi obiettivi.</span><a href="#prezzi">Trova la soluzione per te ↓</a></div>
     </div>
   </section>
@@ -537,57 +566,96 @@
     }});
     dialog.addEventListener('close', () => dialogOpener?.focus());
 
-    // Sticky panels use native scrolling. JS owns only their scale and inner
-    // preview offset, derived afresh from stable document geometry each frame.
+    // The stable outer wrapper measures travel; only this renderer owns transforms.
     const stack = document.querySelector('.project-stack');
+    const stage = stack.querySelector('.project-stage');
     const projects = Array.from(stack.querySelectorAll('.project'));
+    const sceneButtons = Array.from(stack.querySelectorAll('[data-scene]'));
+    const depthToggle = document.querySelector('.depth-toggle');
     const stackMotion = matchMedia('(min-width:900px) and (min-height:640px) and (prefers-reduced-motion:no-preference)');
-    let stackGeometry = [], scrollFrame = 0;
+    const priceCards = Array.from(document.querySelectorAll('.price-card'));
+    let stackGeometry = [], scrollFrame = 0, stackTop = 0, step = 1000, depthEnabled = false, motionOff = false;
     const clamp = value => Math.min(1, Math.max(0, value));
+    const smooth = value => { const t=clamp(value); return t*t*(3-2*t); };
     function measureStack() {
-      const stackTop = stack.getBoundingClientRect().top + scrollY;
-      let naturalTop = stackTop;
-      stackGeometry = projects.map((panel, index) => {
-        const height = panel.offsetHeight;
-        const item = {
-          top: naturalTop, pin: 64 + index * 16, height,
-          surface: panel.querySelector('.project-surface'),
-          preview: panel.querySelector('.browser-demo')
-        };
-        // Sticky offsets vary while scrolling; sum untransformed flow sizes.
-        naturalTop += height + parseFloat(getComputedStyle(panel).marginBottom);
-        return item;
-      });
+      depthEnabled = stackMotion.matches && !motionOff;
+      document.documentElement.classList.toggle('depth-enabled', depthEnabled);
+      step = Math.max(850, innerHeight * 1.15);
+      stack.style.setProperty('--journey-height', `${innerHeight + step * 2.65}px`);
+      stackTop = stack.getBoundingClientRect().top + scrollY;
+      stackGeometry = projects.map(panel => ({
+        top:panel.getBoundingClientRect().top + scrollY, height:panel.offsetHeight,
+        surface:panel.querySelector('.project-surface'), preview:panel.querySelector('.browser-demo')
+      }));
       requestStackFrame();
     }
     function renderStack() {
       scrollFrame = 0;
-      const enabled = stackMotion.matches;
-      // All reads precede writes; CSS sticky remains the sole owner of pinning.
-      const states = stackGeometry.map((item, index) => {
-        const next = stackGeometry[index + 1];
-        const cover = enabled && next ? clamp((scrollY + item.pin + item.height - next.top) / item.height) : 0;
-        const arrival = enabled ? clamp((scrollY + innerHeight - item.top) / (innerHeight + item.height)) : .5;
-        const focusInside = projects[index].contains(document.activeElement) && document.activeElement.matches(':focus-visible');
-        return {item, cover:focusInside ? 0 : cover, arrival, covered:enabled && cover > .97 && !focusInside};
+      const moving = !reduced.matches && !motionOff;
+      const phase = Math.max(0, Math.min(2.65, (scrollY-stackTop)/step));
+      const current = Math.min(2, Math.floor(phase + .16));
+      const priceTop = document.querySelector('.pricing-grid').getBoundingClientRect().top;
+      const priceStates = priceCards.map(card => priceTop + card.offsetTop);
+      const mobilePositions = depthEnabled ? [] : projects.map(panel => panel.getBoundingClientRect().top);
+      projects.forEach((panel,index) => {
+        const item = stackGeometry[index];
+        if (!item) return;
+        const direction = index % 2 ? -1 : 1;
+        if(depthEnabled) {
+          const local = phase-index;
+          const arrival = smooth(-local/.85);
+          const departure = index < 2 ? smooth((local-.60)/.44) : 0;
+          const approach = index===0 ? smooth((stackTop-scrollY)/(innerHeight*.8)) : 0;
+          const incoming = Math.max(arrival,approach);
+          const y = incoming*170 - departure*260;
+          const x = direction*(incoming*220 + departure*100);
+          const z = -incoming*1050 + departure*210;
+          const opacity = (1-departure)* (local < -1 ? clamp(1+(local+1)*2) : 1);
+          panel.style.transform = `translateY(-50%) translate3d(${x}px,${y}px,${z}px) rotateX(${incoming*16-departure*12}deg) rotateY(${direction*(incoming*-32+departure*16)}deg) rotateZ(${direction*(incoming*-7+departure*7)}deg)`;
+          panel.style.opacity = opacity;
+          panel.style.zIndex = index===current ? '3' : '1';
+          if(index!==current && panel.contains(document.activeElement)) sceneButtons[current].focus({preventScroll:true});
+          panel.inert = index!==current;
+          panel.setAttribute('aria-hidden', index!==current ? 'true' : 'false');
+          item.surface.style.transform = '';
+          item.preview.style.transform = `translate3d(0,${Math.sin(local*2)*10}px,0) rotateY(${direction*(-7 + incoming*14)}deg) rotateX(3deg)`;
+        } else {
+          panel.style.transform = '';
+          panel.style.opacity = '';
+          panel.style.zIndex = '';
+          panel.inert = false;
+          panel.removeAttribute('aria-hidden');
+          const entry = moving ? smooth((mobilePositions[index]-innerHeight*.35)/(innerHeight*.65)) : 0;
+          item.surface.style.transform = moving ? `perspective(1200px) translateY(${entry*24}px) rotateX(${entry*7}deg) scale(${1-entry*.035})` : '';
+          const drift = moving ? Math.max(-1,Math.min(1,(mobilePositions[index]+item.height*.65-innerHeight*.5)/innerHeight)) : 0;
+          item.preview.style.transform = moving ? `translateY(${drift*18}px) rotateY(${direction*drift*7}deg)` : '';
+        }
       });
-      states.forEach(({item, cover, arrival, covered}, index) => {
-        item.surface.style.transform = enabled ? `scale(${1 - cover * .045})` : '';
-        item.preview.style.setProperty('--demo-y', enabled ? `${(arrival - .5) * -20}px` : '0px');
-        // Covered CTA links must not remain keyboard targets beneath the next card.
-        projects[index].inert = covered;
+      stage.style.setProperty('--journey-progress',phase/2.65);
+      const atmosphere = stage.querySelector('.depth-atmosphere');
+      atmosphere.style.transform = depthEnabled ? `rotate(${phase*-4}deg) scale(${1+phase*.04})` : '';
+      sceneButtons.forEach((button,index)=>button.setAttribute('aria-current',index===current?'true':'false'));
+      priceCards.forEach((card,index)=>{
+        const reveal = moving ? smooth((priceStates[index]-innerHeight*.72)/(innerHeight*.38)) : 0;
+        card.style.transform = moving ? `perspective(1200px) translateY(${reveal*(65+index*15)}px) rotateX(${reveal*13}deg) rotateY(${reveal*(index-1)*8}deg)` : '';
       });
     }
-    function requestStackFrame() {
-      if (!scrollFrame) scrollFrame = requestAnimationFrame(renderStack);
-    }
-    addEventListener('scroll', requestStackFrame, {passive:true});
-    addEventListener('resize', measureStack);
-    addEventListener('pageshow', measureStack);
-    document.addEventListener('focusin', requestStackFrame);
-    document.addEventListener('focusout', requestStackFrame);
-    stackMotion.addEventListener('change', measureStack);
-    if ('ResizeObserver' in window) new ResizeObserver(measureStack).observe(stack);
+    function requestStackFrame() { if(!scrollFrame) scrollFrame=requestAnimationFrame(renderStack); }
+    sceneButtons.forEach((button,index)=>button.addEventListener('click',()=>{
+      if(depthEnabled) window.scrollTo({top:stackTop+step*(index+.15),behavior:'smooth'});
+    }));
+    depthToggle.addEventListener('click',()=>{
+      motionOff=!motionOff;
+      depthToggle.setAttribute('aria-pressed',String(motionOff));
+      depthToggle.textContent=motionOff?'Attiva movimento':'Riduci movimento';
+      measureStack();
+    });
+    addEventListener('scroll',requestStackFrame,{passive:true});
+    addEventListener('resize',measureStack);
+    addEventListener('pageshow',measureStack);
+    stackMotion.addEventListener('change',measureStack);
+    reduced.addEventListener('change',measureStack);
+    if('ResizeObserver' in window) new ResizeObserver(measureStack).observe(stage);
     document.fonts.ready.then(measureStack);
     measureStack();
 
