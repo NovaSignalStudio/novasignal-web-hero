@@ -173,7 +173,7 @@
 .projects::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 70% 20%,#6250af13,transparent 55%)}
 .project-stack{position:relative;padding-bottom:20px}
 .project{position:relative;margin-bottom:32px;scroll-margin-top:90px}
-.project:focus-within{z-index:5}
+.project:has(:focus-visible){z-index:5}
 .project-surface{position:relative;border:1px solid #ffffff25;border-radius:24px;overflow:hidden;background:#141219;box-shadow:0 24px 70px #0005;transform-origin:center top}
 .project-topline{display:flex;align-items:center;justify-content:space-between;padding:20px 30px;border-bottom:1px solid #ffffff12;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#b9b4c6}
 .project-topline span:first-child{display:flex;align-items:center;gap:12px}
@@ -206,8 +206,8 @@
 .forma-copy h4{font-family:Georgia,serif;font-size:clamp(24px,3vw,44px);font-weight:400;line-height:1;letter-spacing:-.05em;margin:0 0 16px}
 .forma-copy h4 i{font-weight:400;color:#838974}
 .forma-copy p{font-size:8px;line-height:1.8;max-width:150px;margin:0 0 18px}
-.forma-art{min-width:0;display:flex;align-items:stretch;background:#d2cbbb;border-radius:90px 90px 0 0;overflow:hidden}
-.forma-art svg{width:100%;height:100%;object-fit:cover}
+.forma-art{position:relative;min-width:0;display:flex;align-items:stretch;background:#d2cbbb;border-radius:90px 90px 0 0;overflow:hidden}
+.forma-art svg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .demo-bottom{padding:12px 22px;border-top:1px solid #0002;display:flex;justify-content:space-between;font-size:7px;letter-spacing:.12em;text-transform:uppercase}
 .preview-oliva{background:radial-gradient(ellipse at 70% 70%,#78905b45,transparent 75%),#202b24}
 .oliva-demo{background:#e8ebdf;color:#26372e}
@@ -568,7 +568,7 @@
         const next = stackGeometry[index + 1];
         const cover = enabled && next ? clamp((scrollY + item.pin + item.height - next.top) / item.height) : 0;
         const arrival = enabled ? clamp((scrollY + innerHeight - item.top) / (innerHeight + item.height)) : .5;
-        const focusInside = projects[index].contains(document.activeElement);
+        const focusInside = projects[index].contains(document.activeElement) && document.activeElement.matches(':focus-visible');
         return {item, cover:focusInside ? 0 : cover, arrival, covered:enabled && cover > .97 && !focusInside};
       });
       states.forEach(({item, cover, arrival, covered}, index) => {
