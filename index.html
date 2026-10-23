@@ -607,18 +607,18 @@
           const departure = index < 2 ? smooth((local-.60)/.44) : 0;
           const approach = index===0 ? smooth((stackTop-scrollY)/(innerHeight*.8)) : 0;
           const incoming = Math.max(arrival,approach);
-          const y = incoming*170 - departure*260;
-          const x = direction*(incoming*220 + departure*100);
+          const y = incoming*170 - departure*450;
+          const x = direction*(incoming*220 + departure*800);
           const z = -incoming*1050 + departure*210;
-          const opacity = (1-departure)* (local < -1 ? clamp(1+(local+1)*2) : 1);
+          const opacity = (1-smooth((departure-.75)/.25))* (local < -1 ? clamp(1+(local+1)*2) : 1);
           panel.style.transform = `translateY(-50%) translate3d(${x}px,${y}px,${z}px) rotateX(${incoming*16-departure*12}deg) rotateY(${direction*(incoming*-32+departure*16)}deg) rotateZ(${direction*(incoming*-7+departure*7)}deg)`;
           panel.style.opacity = opacity;
-          panel.style.zIndex = index===current ? '3' : '1';
+          panel.style.zIndex = String(projects.length-index);
           if(index!==current && panel.contains(document.activeElement)) sceneButtons[current].focus({preventScroll:true});
           panel.inert = index!==current;
           panel.setAttribute('aria-hidden', index!==current ? 'true' : 'false');
           item.surface.style.transform = '';
-          item.preview.style.transform = `translate3d(0,${Math.sin(local*2)*10}px,0) rotateY(${direction*(-7 + incoming*14)}deg) rotateX(3deg)`;
+          item.preview.style.transform = `translate3d(0,${Math.sin(local*2)*10}px,0) rotateY(${direction*(-7 + incoming*14)}deg) rotateX(3deg) scale(.94)`;
         } else {
           panel.style.transform = '';
           panel.style.opacity = '';
