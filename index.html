@@ -161,10 +161,130 @@
       .stat span{font-size:10px}
       .logo-row{gap:26px 20px}.logo-row span{font-size:17px}
     }
+/* The continuation shares the hero's type, light and materials. */
+.section-shell{width:min(1160px,calc(100% - 64px));margin-inline:auto}
+.section-kicker{display:flex;align-items:center;gap:12px;color:var(--teal);font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;margin:0 0 25px}
+.section-kicker::before{content:'';width:24px;height:1px;background:currentColor}
+.section-title{font-family:'DM Sans',sans-serif;font-size:clamp(40px,5vw,70px);line-height:1.06;letter-spacing:-.055em;font-weight:380;margin:0}
+.section-title em{font-style:normal;color:#a7a1b4}
+.section-intro{color:#aaa7b5;line-height:1.7;font-size:15px;max-width:380px;margin:0}
+.section-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:45px;margin-bottom:54px}
+.projects{position:relative;padding:115px 0 50px;border-top:1px solid #ffffff0c;scroll-margin-top:40px}
+.projects::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 70% 20%,#6250af13,transparent 55%)}
+.project-stack{position:relative;padding-bottom:20px}
+.project{position:relative;margin-bottom:32px;scroll-margin-top:90px}
+.project:focus-within{z-index:5}
+.project-surface{position:relative;border:1px solid #ffffff25;border-radius:24px;overflow:hidden;background:#141219;box-shadow:0 24px 70px #0005;transform-origin:center top}
+.project-topline{display:flex;align-items:center;justify-content:space-between;padding:20px 30px;border-bottom:1px solid #ffffff12;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#b9b4c6}
+.project-topline span:first-child{display:flex;align-items:center;gap:12px}
+.project-topline b{font-family:'DM Sans',sans-serif;font-size:18px;font-weight:400;color:#f7f6fa;letter-spacing:-.02em}
+.concept-label{border:1px solid #ffffff22;padding:6px 9px;border-radius:6px;font-size:9px;letter-spacing:.1em;color:#bdb7c9}
+.project-body{display:grid;grid-template-columns:.82fr 1.65fr;min-height:455px}
+.project-story{padding:38px 30px;display:flex;flex-direction:column;align-items:flex-start}
+.project-sector{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#a7a0b5;margin:0 0 40px}
+.project-story h3{font-family:'DM Sans',sans-serif;font-size:40px;font-weight:380;line-height:1.04;letter-spacing:-.045em;margin:0 0 20px}
+.project-description{font-size:13px;line-height:1.8;color:#b1aaba;max-width:250px;margin:0 0 20px}
+.project-tags{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 32px;list-style:none;padding:0}
+.project-tags li{padding:6px 9px;border-radius:30px;border:1px solid #ffffff16;font-size:10px;color:#bab4c5}
+.text-link{display:inline-flex;align-items:center;gap:22px;font-size:13px;font-weight:450;border-bottom:1px solid #ffffff40;padding-bottom:8px;margin-top:auto}
+.text-link:hover{color:var(--teal);border-color:var(--teal)}
+.project-preview{position:relative;margin:24px 24px 24px 0;display:grid;place-items:center;overflow:hidden;border-radius:12px;min-width:0;background:#262225}
+.browser-demo{width:calc(100% - 52px);border-radius:8px;overflow:hidden;box-shadow:0 20px 45px #0006;transform:translateY(var(--demo-y,0px));border:1px solid #ffffff20;position:relative}
+.browser-bar{height:25px;background:#ffffff0d;display:flex;align-items:center;justify-content:center;font-size:8px;letter-spacing:.02em;position:relative;border-bottom:1px solid #ffffff12;color:#b7b2be}
+.browser-bar::before{content:'•••';position:absolute;left:10px;letter-spacing:3px;color:#a09aa7;font-size:12px}
+.demo-nav{display:flex;align-items:center;justify-content:space-between;padding:17px 22px;font-size:8px}
+.demo-logo{font-size:17px;font-weight:600;letter-spacing:-.045em}
+.demo-nav-links{display:flex;gap:16px;opacity:.7}
+.demo-action{display:inline-block;padding:8px 12px;border:1px solid currentColor;border-radius:2px;font-size:8px}
+.demo-caption{position:absolute;right:20px;bottom:12px;z-index:2;font-size:8px;letter-spacing:.13em;text-transform:uppercase;opacity:.65}
+.preview-forma{background:radial-gradient(ellipse at 40% 10%,#b5a48a44,transparent 70%),#262425}
+.forma-demo{background:#eeebe3;color:#393a31}
+.forma-demo .browser-bar{background:#ddd9d0;color:#79756b;border-color:#0001}
+.forma-content{display:grid;grid-template-columns:1fr 1fr;min-height:270px;padding:16px 22px 24px;gap:12px}
+.forma-copy{display:flex;flex-direction:column;align-items:flex-start}
+.forma-copy small{font-size:7px;letter-spacing:.12em;text-transform:uppercase;margin:12px 0 23px}
+.forma-copy h4{font-family:Georgia,serif;font-size:clamp(24px,3vw,44px);font-weight:400;line-height:1;letter-spacing:-.05em;margin:0 0 16px}
+.forma-copy h4 i{font-weight:400;color:#838974}
+.forma-copy p{font-size:8px;line-height:1.8;max-width:150px;margin:0 0 18px}
+.forma-art{min-width:0;display:flex;align-items:stretch;background:#d2cbbb;border-radius:90px 90px 0 0;overflow:hidden}
+.forma-art svg{width:100%;height:100%;object-fit:cover}
+.demo-bottom{padding:12px 22px;border-top:1px solid #0002;display:flex;justify-content:space-between;font-size:7px;letter-spacing:.12em;text-transform:uppercase}
+.preview-oliva{background:radial-gradient(ellipse at 70% 70%,#78905b45,transparent 75%),#202b24}
+.oliva-demo{background:#e8ebdf;color:#26372e}
+.oliva-demo .browser-bar{background:#dce2d1;color:#66745c;border-color:#0001}
+.oliva-demo .demo-logo{font-family:Georgia,serif;font-size:20px;font-weight:400}
+.oliva-content{min-height:275px;position:relative;padding:10px 24px 26px;overflow:hidden}
+.oliva-content small{font-size:7px;letter-spacing:.15em;text-transform:uppercase}
+.oliva-content h4{font-family:Georgia,serif;font-size:clamp(32px,4.4vw,64px);line-height:.98;font-weight:400;letter-spacing:-.05em;margin:23px 0 20px;position:relative;z-index:1}
+.oliva-content h4 i{color:#708153}
+.oliva-branch{position:absolute;width:62%;height:103%;right:-10%;top:0;transform:rotate(-12deg)}
+.oliva-content .demo-action{position:relative;z-index:1;background:#26372e;color:#eef1e5;border-color:#26372e;border-radius:30px}
+.preview-orbit{background:radial-gradient(ellipse at 60% 35%,#533d9a60,transparent 70%),#171923}
+.orbit-demo{background:#0c0d17;color:#efedf7}
+.orbit-demo .browser-bar{background:#ffffff05}
+.orbit-content{position:relative;min-height:283px;padding:16px 24px 20px;overflow:hidden;background-image:linear-gradient(#ffffff05 1px,transparent 1px),linear-gradient(90deg,#ffffff05 1px,transparent 1px);background-size:28px 28px}
+.orbit-content small{font-size:7px;letter-spacing:.1em;color:#a5e8dc;text-transform:uppercase}
+.orbit-content h4{font-family:'DM Sans',sans-serif;font-size:clamp(28px,3.5vw,48px);line-height:1.02;letter-spacing:-.05em;font-weight:400;margin:30px 0 15px;position:relative;z-index:1}
+.orbit-content h4 span{color:#a8a2d5}
+.orbit-content p{position:relative;z-index:1;font-size:8px;line-height:1.7;color:#aaa8bc;width:48%;margin-bottom:18px}
+.orbit-content .demo-action{position:relative;z-index:1;border:0;border-radius:30px;background:#a69be9;color:#141323}
+.orbit-orb{position:absolute;width:240px;height:240px;right:-40px;top:13px;border:1px solid #bdf7ee65;border-radius:50%;background:radial-gradient(ellipse at 30% 25%,#bdf7ee70 0%,#6f5adc20 42%,#0c0d17 75%);box-shadow:inset -25px -15px 40px #03030d,0 0 70px #6854db40;transform:rotate(-30deg)}
+.orbit-orb::before,.orbit-orb::after{content:'';position:absolute;inset:35% -20%;border:1px solid #ad9aff66;border-radius:50%;transform:rotate(-15deg);box-shadow:0 0 10px #7e63d833}
+.orbit-orb::after{inset:15% -10%;transform:rotate(55deg)}
+.project-afterword{display:flex;justify-content:space-between;gap:25px;font-size:12px;color:#a8a2b3;margin:30px 0 0;line-height:1.7}
+.project-afterword a{color:#d5d0e0;border-bottom:1px solid #ffffff30;white-space:nowrap;align-self:flex-start}
+.pricing{position:relative;padding:125px 0 90px;scroll-margin-top:45px}
+.pricing::before{content:'';position:absolute;pointer-events:none;inset:0;background:radial-gradient(ellipse at 50% 50%,#6842bd16,transparent 65%)}
+.pricing .section-heading{align-items:center;position:relative}
+.price-intro-note{display:flex;align-items:center;gap:10px;color:#d7d0e5;font-size:12px;border:1px solid #ffffff18;border-radius:30px;padding:12px 16px;white-space:nowrap}
+.price-intro-note i{height:6px;width:6px;border-radius:50%;background:#bdf7ee;box-shadow:0 0 12px #bdf7ee55}
+.pricing-grid{display:grid;grid-template-columns:1fr 1.09fr 1fr;gap:18px;align-items:stretch;position:relative}
+.price-card{position:relative;display:flex;flex-direction:column;background:linear-gradient(160deg,#ffffff04,#ffffff01);border:1px solid #ffffff20;border-radius:20px;padding:31px 27px 27px;min-width:0}
+.price-card.featured{background:linear-gradient(155deg,#2b2047 0%,#191520 65%);border-color:#9980df90;box-shadow:0 0 75px #6441b41a,inset 0 1px #ffffff1a}
+.price-card.featured::before{content:'';position:absolute;left:25%;right:25%;top:-1px;height:1px;background:#dbcaff;box-shadow:0 0 17px 2px #a77df766}
+.plan-category{margin:0 0 14px;color:#a6a0b2;font-size:10px;text-transform:uppercase;letter-spacing:.13em}
+.plan-name-row{display:flex;gap:10px;justify-content:space-between;align-items:center}
+.plan-name-row h3{font-family:'DM Sans',sans-serif;font-size:26px;font-weight:400;letter-spacing:-.035em;margin:0}
+.plan-badge{font-size:9px;color:#d7c9fa;padding:5px 7px;border-radius:30px;background:#bc99ff10;border:1px solid #bc99ff33;white-space:nowrap}
+.price{display:flex;align-items:baseline;gap:5px;margin:30px 0 6px;font-family:'DM Sans',sans-serif;font-size:52px;font-weight:380;letter-spacing:-.05em;line-height:1}
+.price .currency{font-size:25px;color:#aaa3b9;font-weight:350}.price .from{font-family:Inter,sans-serif;font-size:12px;letter-spacing:0;color:#aaa3b9;margin-right:5px}
+.price-terms{font-size:11px;color:#a7a0b5;min-height:17px;margin:0 0 22px}
+.plan-summary{font-size:13px;line-height:1.7;color:#c3bccf;min-height:66px;margin:0 0 24px}
+.plan-cta{padding:14px 13px;width:100%;font-size:12px;gap:18px;min-height:47px}
+.plan-rule{height:1px;background:#ffffff13;border:0;width:100%;margin:25px 0}
+.plan-features{list-style:none;padding:0;margin:0 0 26px;color:#bcb5c9;font-size:12px;line-height:1.65}
+.plan-features li{position:relative;padding-left:19px;margin:0 0 13px}
+.plan-features li::before{content:'✓';position:absolute;left:0;color:#bdf7ee;font-size:11px}
+.plan-footer{font-size:10px;color:#8f879f;line-height:1.6;margin:auto 0 0}
+.price-footnote{font-size:11px;line-height:1.8;color:#8f899d;margin:21px auto 0;max-width:720px;text-align:center}
+.preview-callout{position:relative;margin-top:58px;border-top:1px solid #ffffff16;padding:34px 0 0;display:flex;gap:30px;justify-content:space-between;align-items:center}
+.preview-callout h3{font-family:'DM Sans',sans-serif;font-size:28px;font-weight:380;letter-spacing:-.035em;margin:0 0 8px}
+.preview-callout p{font-size:13px;line-height:1.7;color:#a9a2b8;margin:0;max-width:550px}
+.preview-callout .pill{padding:16px 24px;font-size:13px;flex-shrink:0;gap:18px}
+.site-footer{border-top:1px solid #ffffff10;padding:26px 0 30px;color:#8f899a;font-size:11px}
+.footer-row{display:flex;align-items:center;justify-content:space-between;gap:24px}.footer-row a:hover{color:#bdf7ee}.footer-row nav{display:flex;gap:25px}
+.scroll-hint{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:12px;font-size:10px;color:#928b9d;letter-spacing:.12em;text-transform:uppercase}.scroll-hint span{font-size:17px;color:#bdf7ee}
+@media(min-width:900px) and (min-height:640px) and (prefers-reduced-motion:no-preference){
+  .project-stack{padding-bottom:8vh}
+  .project{position:sticky;top:64px;margin-bottom:24vh}
+  .project:nth-child(2){top:80px}.project:nth-child(3){top:96px;margin-bottom:0}
+  .project-surface{will-change:transform}
+}
+@media(min-width:900px) and (max-height:760px){.project-body{min-height:400px}.project-sector{margin-bottom:24px}.project-story{padding:28px}.project-topline{padding:15px 28px}.project-story h3{font-size:34px}.project-tags{margin-bottom:18px}.browser-demo{width:calc(100% - 40px)}}
+@media(max-width:1000px),(max-aspect-ratio:7/5){.scroll-hint{position:relative;inset:auto;transform:none;justify-content:center;margin:34px auto 0}.pricing-grid{gap:12px}.price-card{padding:26px 20px}.plan-name-row{flex-wrap:wrap}.price{font-size:44px}}
+@media(max-width:899px){
+  .section-shell{width:calc(100% - 40px);max-width:690px}.projects{padding-top:80px}.section-heading{display:block;margin-bottom:32px}.section-intro{margin-top:22px;max-width:440px}.section-title{font-size:48px}.project-body{grid-template-columns:1fr;min-height:0}.project-story{padding:26px}.project-sector{margin-bottom:20px}.project-story h3{font-size:35px}.project-description{max-width:440px}.project-tags{margin-bottom:22px}.project-preview{margin:0 18px 18px;min-height:350px}.project-topline{padding:17px 24px}.browser-demo{width:calc(100% - 38px)}.forma-copy h4{font-size:42px}.oliva-content h4{font-size:58px}.orbit-content h4{font-size:45px}.project-afterword{display:block}.project-afterword a{display:inline-block;margin-top:15px}.pricing{padding-top:80px}.price-intro-note{display:inline-flex;margin-top:24px}.pricing-grid{grid-template-columns:1fr;gap:22px}.price-card{padding:30px;max-width:none}.plan-name-row{flex-wrap:nowrap}.price{font-size:54px}.plan-summary{min-height:0}.plan-features{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}.plan-footer{margin-top:0}.preview-callout{align-items:flex-start;flex-direction:column}.footer-row{align-items:flex-start;flex-direction:column}.footer-row nav{flex-wrap:wrap}
+}
+@media(max-width:480px){
+  .section-shell{width:calc(100% - 36px)}.section-title{font-size:39px}.section-intro{font-size:14px}.section-kicker{font-size:10px;margin-bottom:20px}.project{margin-bottom:24px}.project-surface{border-radius:18px}.project-story{padding:26px 22px}.project-topline{padding:15px 22px;font-size:9px}.project-story h3{font-size:34px}.project-preview{min-height:270px;margin:0 12px 12px}.browser-demo{width:calc(100% - 22px)}.browser-bar{height:20px;font-size:6px}.demo-nav{padding:12px 14px}.demo-logo{font-size:14px}.demo-nav-links{gap:10px;font-size:6px}.demo-nav-links span:last-child{display:none}.forma-content{padding:8px 14px 16px;min-height:210px;gap:8px}.forma-copy small{font-size:6px;margin:5px 0 15px}.forma-copy h4{font-size:29px}.forma-copy p{font-size:6.5px;margin-bottom:12px}.demo-action{font-size:7px;padding:7px 9px}.demo-bottom{padding:10px 14px;font-size:6px}.oliva-content{min-height:220px;padding:7px 15px 19px}.oliva-content h4{font-size:43px;margin:18px 0}.oliva-content small{font-size:6px}.oliva-demo .demo-logo{font-size:17px}.orbit-content{min-height:215px;padding:10px 15px 16px}.orbit-content h4{font-size:32px;margin:24px 0 12px}.orbit-content small{font-size:6px}.orbit-content p{font-size:6px;width:50%}.orbit-orb{width:175px;height:175px;right:-34px;top:25px}.price-card{padding:28px 24px}.plan-features{display:block}.price-footnote{text-align:left}.preview-callout h3{font-size:26px}.preview-callout .pill{width:100%;white-space:normal;text-align:center}.footer-row nav{gap:18px}
+}
+@media(prefers-reduced-motion:reduce){.project{position:relative!important;top:auto!important;margin-bottom:24px!important}.project-stack{padding-bottom:0}.project-surface,.browser-demo{transform:none!important}.scroll-hint span{animation:none}}
+
   </style>
 </head>
 <body>
   <a class="skip" href="#main">Vai al contenuto</a>
+  <main id="main" tabindex="-1">
   <div class="canvas" id="top">
     <header class="header">
       <a class="brand" href="#top" aria-label="novasignal.it — Home" data-header><svg viewBox="0 0 31.5 48.5" aria-hidden="true" focusable="false">
@@ -179,23 +299,23 @@
         <rect x="0.5" y="18.5" width="9" height="10" fill="#fdfdfd"/>
         <rect x="22" y="19.5" width="9.5" height="9.5" fill="#fdfdfd"/>
       </svg><span class="brand-word">novasignal<span class="brand-domain">.it</span></span></a>
-      <nav class="desktop-nav" aria-label="Navigazione principale"><a href="#siti-web" data-detail="services" data-header>Siti web</a>
+      <nav class="desktop-nav" aria-label="Navigazione principale"><a href="#progetti" data-header>Concept</a>
         <a href="#metodo" data-detail="method" data-header>Come lavoriamo</a>
-        <a href="https://novasignal.it/#progetti" target="_blank" rel="noopener noreferrer" data-header>Concept ↗</a>
+        <a href="#prezzi" data-header>Prezzi</a>
         <a href="#domande" data-detail="faq" data-header>Domande frequenti</a></nav>
       <div class="header-actions"><a class="pill glass header-cta" href="https://wa.me/393206891014?text=Ciao%20NovaSignal%2C%20vorrei%20un%E2%80%99anteprima%20gratuita%20del%20sito%20per%20la%20mia%20attivit%C3%A0." target="_blank" rel="noopener noreferrer" data-header>Parliamo del tuo sito ↗</a></div>
       <button class="menu-toggle glass" type="button" aria-label="Apri menu" aria-controls="mobile-nav" aria-expanded="false" data-header><span></span><span></span></button>
-      <nav id="mobile-nav" class="mobile-nav glass" aria-label="Navigazione mobile" hidden inert><a href="#siti-web" data-detail="services">Siti web</a>
+      <nav id="mobile-nav" class="mobile-nav glass" aria-label="Navigazione mobile" hidden inert><a href="#progetti">Concept</a>
         <a href="#metodo" data-detail="method">Come lavoriamo</a>
-        <a href="https://novasignal.it/#progetti" target="_blank" rel="noopener noreferrer">Concept ↗</a>
+        <a href="#prezzi">Prezzi</a>
         <a href="#domande" data-detail="faq">Domande frequenti</a><a href="https://wa.me/393206891014?text=Ciao%20NovaSignal%2C%20vorrei%20un%E2%80%99anteprima%20gratuita%20del%20sito%20per%20la%20mia%20attivit%C3%A0." target="_blank" rel="noopener noreferrer" class="mobile-meet">Richiedi l’anteprima ↗</a></nav>
     </header>
-    <main id="main" tabindex="-1">
+    <div class="hero-content">
       <section class="copy" aria-labelledby="headline">
         <p class="eyebrow">Siti web su misura per attività e imprese</p>
         <h1 id="headline"><span class="line-mask"><span class="headline-line">Siti web che</span></span><span class="line-mask"><span class="headline-line">fanno scegliere</span></span><span class="line-mask"><span class="headline-line">la tua attività.</span></span></h1>
         <p class="subline">Design su misura, testi chiari e un percorso semplice per contattarti. Realizziamo il sito della tua attività, dalla prima idea alla messa online.</p>
-        <div class="cta-row"><a class="pill primary" href="https://wa.me/393206891014?text=Ciao%20NovaSignal%2C%20vorrei%20un%E2%80%99anteprima%20gratuita%20del%20sito%20per%20la%20mia%20attivit%C3%A0." target="_blank" rel="noopener noreferrer">Richiedi l’anteprima <span aria-hidden="true">↗</span></a><a class="pill glass" href="#metodo" data-detail="method">Come funziona</a></div>
+        <div class="cta-row"><a class="pill primary" href="https://wa.me/393206891014?text=Ciao%20NovaSignal%2C%20vorrei%20un%E2%80%99anteprima%20gratuita%20del%20sito%20per%20la%20mia%20attivit%C3%A0." target="_blank" rel="noopener noreferrer">Richiedi l’anteprima <span aria-hidden="true">↗</span></a><a class="pill glass" href="#progetti">Guarda i concept</a></div>
         <p class="cta-note">Gratuita e senza impegno. Parliamone su WhatsApp.</p>
         <ul class="stats" aria-label="Cosa costruiamo per te"><li class="stat"><strong>Design</strong><span>su misura</span></li><li class="stat"><strong>Mobile</strong><span>da ogni schermo</span></li><li class="stat"><strong>Contatti</strong><span>a portata di clic</span></li></ul>
       </section>
@@ -217,9 +337,70 @@
         <button class="media-control glass" type="button" aria-label="Metti in pausa l’animazione" data-action="pause" title="Metti in pausa l’animazione"><svg class="pause-icon" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1h3v10H2zm5 0h3v10H7z"/></svg><svg class="play-icon" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1v10l8-5z"/></svg></button>
         <span class="sr-only" id="media-status" role="status" aria-live="polite"></span>
       </section>
-    </main>
-    <footer class="logo-row" aria-label="Soluzioni web NovaSignal"><span>Siti aziendali</span><span>Landing page</span><span>E-commerce</span><span>Restyling</span></footer>
+    </div>
+    <div class="logo-row" aria-label="Soluzioni web NovaSignal"><span>Siti aziendali</span><span>Landing page</span><span>E-commerce</span><span>Restyling</span></div>
+    <a class="scroll-hint" href="#progetti">Scopri le possibilità <span aria-hidden="true">↓</span></a>
   </div>
+  <section class="projects" id="progetti" aria-labelledby="projects-title">
+    <div class="section-shell">
+      <div class="section-heading">
+        <div><p class="section-kicker">01 — Possibilità, da esplorare</p><h2 class="section-title" id="projects-title">La tua attività.<br><em>Un altro primo impatto.</em></h2></div>
+        <p class="section-intro">Tre direzioni, tre modi di farsi scegliere. Scorri i concept e immagina il tuo brand al loro posto.</p>
+      </div>
+      <div class="project-stack">
+        <article class="project" id="concept-forma" aria-labelledby="forma-title">
+          <div class="project-surface">
+            <div class="project-topline"><span><b>01</b> FORMA STUDIO</span><span class="concept-label">Concept NovaSignal</span></div>
+            <div class="project-body">
+              <div class="project-story"><p class="project-sector">Architettura & interior</p><h3 id="forma-title">Lo spazio giusto<br>per il tuo lavoro.</h3><p class="project-description">Un portfolio che mette i progetti al centro. Immagini ampie, dettagli curati e una strada diretta verso il primo incontro.</p><ul class="project-tags"><li>Portfolio</li><li>Identità</li><li>Contatti</li></ul><a class="text-link" href="https://wa.me/393206891014?text=Ciao%20NovaSignal%2C%20mi%20piace%20la%20direzione%20del%20concept%20Forma.%20Vorrei%20un%20sito%20per%20la%20mia%20attivit%C3%A0%20e%20un%E2%80%99anteprima%20gratuita." target="_blank" rel="noopener noreferrer">Voglio una direzione così <span aria-hidden="true">↗</span></a></div>
+              <div class="project-preview preview-forma" role="img" aria-label="Concept Forma: sito per uno studio di architettura, con tipografia editoriale, toni sabbia e illustrazione di uno spazio architettonico.">
+                <div class="browser-demo forma-demo" aria-hidden="true"><div class="browser-bar">forma · studio di architettura</div><div class="demo-nav"><span class="demo-logo">forma.</span><div class="demo-nav-links"><span>Progetti</span><span>Lo studio</span><span>Parliamone ↗</span></div></div><div class="forma-content"><div class="forma-copy"><small>Architettura, da abitare.</small><h4>Spazi per<br>sentirsi<br><i>al proprio<br>posto.</i></h4><p>Progettiamo luoghi che appartengono a chi li vive.</p><span class="demo-action">Esplora i progetti ↗</span></div><div class="forma-art"><svg viewBox="0 0 220 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="room-wall" x2="1" y2="1"><stop stop-color="#d8c7aa"/><stop offset="1" stop-color="#a99678"/></linearGradient><linearGradient id="room-floor" x2=".8" y2="1"><stop stop-color="#bba381"/><stop offset="1" stop-color="#e6d8bc"/></linearGradient></defs><rect width="220" height="300" fill="url(#room-wall)"/><path d="M0 210 220 188V300H0Z" fill="url(#room-floor)"/><path d="M27 0H37V226H27ZM80 0H90V215H80ZM133 0H143V203H133" fill="#f3e8d0"/><path d="M37 0H47V218L37 226ZM90 0H100V208L90 215ZM143 0H153V197L143 203Z" fill="#8e8069"/><path d="M37 226 112 300H140L47 218ZM90 215 184 300H210L100 208ZM143 203 220 267V242L153 197Z" fill="#e9d9bb"/><path d="M157 35Q181 5 204 35V188H157Z" fill="#5f6754"/><path d="M170 41Q181 23 192 41V187H170Z" fill="#758068"/><ellipse cx="139" cy="236" rx="47" ry="13" fill="#6d624a" opacity=".17"/><path d="M98 215Q140 192 176 213V232H98Z" fill="#eee2ca"/><path d="M98 231H176V238H98Z" fill="#a99474"/><path d="M109 237V256H116V237M162 237V251H169V237" fill="#5f5c4d"/><path d="M187 243 207 240 202 273H192Z" fill="#696d54"/><path d="M197 245V193M198 222Q175 203 181 199Q197 198 198 217M198 208Q207 183 215 190Q220 204 198 211M197 233Q177 220 182 215Q193 214 197 228" fill="#59694f" stroke="#59694f" stroke-width="2"/></svg></div></div><div class="demo-bottom"><span>Materia. Luce. Equilibrio.</span><span>Studio indipendente ↗</span></div></div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="project" id="concept-oliva" aria-labelledby="oliva-title">
+          <div class="project-surface">
+            <div class="project-topline"><span><b>02</b> OLIVA CUCINA</span><span class="concept-label">Concept NovaSignal</span></div>
+            <div class="project-body">
+              <div class="project-story"><p class="project-sector">Ristoranti & ospitalità</p><h3 id="oliva-title">Il primo assaggio<br>è online.</h3><p class="project-description">L’atmosfera del tuo locale, prima ancora di entrare. Menù, identità e prenotazioni riuniti in un’esperienza essenziale.</p><ul class="project-tags"><li>Menù</li><li>Mobile</li><li>Prenotazioni</li></ul><a class="text-link" href="https://wa.me/393206891014?text=Ciao%20NovaSignal%2C%20mi%20piace%20la%20direzione%20del%20concept%20Oliva.%20Vorrei%20un%20sito%20per%20la%20mia%20attivit%C3%A0%20e%20un%E2%80%99anteprima%20gratuita." target="_blank" rel="noopener noreferrer">Voglio una direzione così <span aria-hidden="true">↗</span></a></div>
+              <div class="project-preview preview-oliva" role="img" aria-label="Concept Oliva: sito di un ristorante in verde salvia, con titolo editoriale, illustrazione botanica e invito a prenotare.">
+                <div class="browser-demo oliva-demo" aria-hidden="true"><div class="browser-bar">oliva · cucina di stagione</div><div class="demo-nav"><span class="demo-logo">oliva</span><div class="demo-nav-links"><span>La cucina</span><span>Il menù</span><span>Prenota ↗</span></div></div><div class="oliva-content"><small>Buono, come le cose semplici.</small><h4>La stagione<br>si siede<br><i>a tavola.</i></h4><span class="demo-action">Prenota il tuo tavolo ↗</span><svg class="oliva-branch" viewBox="0 0 240 300" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="leaf" x2="1" y2="1"><stop stop-color="#90a777"/><stop offset="1" stop-color="#334b3c"/></linearGradient></defs><path d="M65 320Q130 180 165 10" stroke="#5d7050" stroke-width="3" fill="none"/><g fill="url(#leaf)"><path d="M151 65Q101 20 106 0Q156 9 151 65Z"/><path d="M149 77Q187 22 222 27Q210 74 149 77Z"/><path d="M136 114Q73 77 77 43Q132 61 136 114Z"/><path d="M127 149Q174 94 223 103Q194 150 127 149Z"/><path d="M116 180Q48 130 55 95Q110 117 116 180Z"/><path d="M104 211Q155 165 209 173Q175 222 104 211Z"/><path d="M87 251Q22 207 27 167Q86 190 87 251Z"/><path d="M80 273Q124 236 172 245Q141 286 80 273Z"/></g><g fill="#344637"><ellipse cx="133" cy="138" rx="9" ry="14" transform="rotate(20 133 138)"/><ellipse cx="119" cy="153" rx="8" ry="12" transform="rotate(-20 119 153)"/><ellipse cx="95" cy="232" rx="9" ry="13" transform="rotate(25 95 232)"/></g><g stroke="#adbb97" stroke-width=".7" fill="none" opacity=".6"><path d="M151 65 111 9M149 77 212 33M136 114 83 50M127 149 211 109M116 180 61 102M104 211 196 178M87 251 34 179M80 273 160 249"/></g></svg></div><div class="demo-bottom"><span>Ingredienti vicini. Idee aperte.</span><span>Scopri il menù →</span></div></div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="project" id="concept-orbit" aria-labelledby="orbit-title">
+          <div class="project-surface">
+            <div class="project-topline"><span><b>03</b> ORBIT PLATFORM</span><span class="concept-label">Concept NovaSignal</span></div>
+            <div class="project-body">
+              <div class="project-story"><p class="project-sector">Startup & prodotti digitali</p><h3 id="orbit-title">Un’idea complessa.<br>Un messaggio chiaro.</h3><p class="project-description">Il tuo prodotto spiegato in pochi sguardi. Una landing con carattere, contenuti leggibili e un invito alla demo sempre a portata.</p><ul class="project-tags"><li>Landing page</li><li>Motion</li><li>Richiesta demo</li></ul><a class="text-link" href="https://wa.me/393206891014?text=Ciao%20NovaSignal%2C%20mi%20piace%20la%20direzione%20del%20concept%20Orbit.%20Vorrei%20una%20landing%20per%20il%20mio%20progetto%20e%20un%E2%80%99anteprima%20gratuita." target="_blank" rel="noopener noreferrer">Voglio una direzione così <span aria-hidden="true">↗</span></a></div>
+              <div class="project-preview preview-orbit" role="img" aria-label="Concept Orbit: landing di un prodotto digitale, sfondo scuro, sfera luminosa e invito a scoprire la piattaforma.">
+                <div class="browser-demo orbit-demo" aria-hidden="true"><div class="browser-bar">orbit · everything in sync</div><div class="demo-nav"><span class="demo-logo">◉ orbit</span><div class="demo-nav-links"><span>Platform</span><span>Solutions</span><span>Get in touch ↗</span></div></div><div class="orbit-content"><small>Un nuovo spazio per le tue idee</small><h4>Meno distanze.<br><span>Più possibilità.</span></h4><p>Persone, strumenti e progetti.<br>Tutto nella stessa orbita.</p><span class="demo-action">Scopri la piattaforma ↗</span><div class="orbit-orb"></div></div><div class="demo-bottom"><span>Connect. Create. Move forward.</span><span>Built around you ↗</span></div></div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="project-afterword"><span>Concept originali a scopo illustrativo. Il tuo sito parte dalla tua attività, dai tuoi contenuti e dai tuoi obiettivi.</span><a href="#prezzi">Trova la soluzione per te ↓</a></div>
+    </div>
+  </section>
+  <section class="pricing" id="prezzi" aria-labelledby="pricing-title">
+    <div class="section-shell">
+      <div class="section-heading"><div><p class="section-kicker">02 — Il prossimo passo</p><h2 class="section-title" id="pricing-title">Il tuo sito.<br><em>Un investimento chiaro.</em></h2></div><div class="price-intro-note"><i aria-hidden="true"></i> Prima l’anteprima. Poi la scelta.</div></div>
+      <!-- Package prices and inclusions: public NovaSignal list, checked 2026-10-23. -->
+      <div class="pricing-grid">
+        <article class="price-card" aria-labelledby="essential-title"><p class="plan-category">Una presenza, fatta bene</p><div class="plan-name-row"><h3 id="essential-title">Essenziale</h3></div><p class="price"><span class="currency">€</span>1.200</p><p class="price-terms">una tantum</p><p class="plan-summary">Una pagina per presentare la tua attività e rendere semplice contattarti.</p><a class="plan-cta pill glass" href="https://wa.me/393206891014?text=Ciao%20NovaSignal%2C%20vorrei%20informazioni%20sul%20pacchetto%20Essenziale%20da%201.200%20%E2%82%AC%20e%20sull%E2%80%99anteprima%20gratuita." target="_blank" rel="noopener noreferrer">Parliamo di Essenziale <span aria-hidden="true">↗</span></a><hr class="plan-rule"><ul class="plan-features"><li>Landing page su misura</li><li>Design responsive</li><li>Modulo contatti e WhatsApp</li><li>SEO di base</li></ul><p class="plan-footer">Per partire con un obiettivo preciso.</p></article>
+        <article class="price-card featured" aria-labelledby="signature-title"><p class="plan-category">Il sito completo</p><div class="plan-name-row"><h3 id="signature-title">Signature</h3><span class="plan-badge">Design + motion</span></div><p class="price"><span class="currency">€</span>2.000</p><p class="price-terms">una tantum · oppure 2 rate da €1.000</p><p class="plan-summary">Più spazio per raccontarti, con contenuti curati e animazioni su misura.</p><a class="plan-cta pill primary" href="https://wa.me/393206891014?text=Ciao%20NovaSignal%2C%20sono%20interessato%20al%20pacchetto%20Signature%20da%202.000%20%E2%82%AC.%20Vorrei%20richiedere%20l%E2%80%99anteprima%20gratuita." target="_blank" rel="noopener noreferrer">Richiedi l’anteprima <span aria-hidden="true">↗</span></a><hr class="plan-rule"><ul class="plan-features"><li>Fino a 6 pagine su misura</li><li>Video e animazioni allo scroll</li><li>Testi scritti insieme a te</li><li>SEO locale e Google Business</li><li>Dominio, hosting e SSL: primo anno</li><li>Privacy e cookie</li><li>30 giorni di assistenza</li></ul><p class="plan-footer">Per dare al tuo brand una presenza completa.</p></article>
+        <article class="price-card" aria-labelledby="custom-title"><p class="plan-category">Più possibilità</p><div class="plan-name-row"><h3 id="custom-title">Su misura</h3></div><p class="price"><span class="from">da</span><span class="currency">€</span>4.000</p><p class="price-terms">preventivo sul progetto</p><p class="plan-summary">Per esperienze 3D, vendite online e progetti con esigenze specifiche.</p><a class="plan-cta pill glass" href="https://wa.me/393206891014?text=Ciao%20NovaSignal%2C%20vorrei%20parlare%20di%20un%20progetto%20Su%20misura%2C%20a%20partire%20da%204.000%20%E2%82%AC." target="_blank" rel="noopener noreferrer">Raccontaci il progetto <span aria-hidden="true">↗</span></a><hr class="plan-rule"><ul class="plan-features"><li>La base del pacchetto Signature</li><li>3D e animazioni avanzate</li><li>E-commerce o prenotazioni</li><li>Possibilità multilingua</li></ul><p class="plan-footer">Funzioni e perimetro definiti insieme.</p></article>
+      </div>
+      <p class="price-footnote">Prima di iniziare concordiamo pagine, funzioni e costi nel preventivo. I pulsanti aprono una chat WhatsApp: nessun acquisto automatico.</p>
+      <div class="preview-callout"><div><h3>Non sai ancora quale scegliere?</h3><p>Raccontaci la tua attività. Partiamo da un’anteprima gratuita e senza impegno, poi valutiamo insieme il progetto.</p></div><a class="pill glass" href="https://wa.me/393206891014?text=Ciao%20NovaSignal%2C%20vorrei%20un%E2%80%99anteprima%20gratuita%20del%20sito%20per%20la%20mia%20attivit%C3%A0." target="_blank" rel="noopener noreferrer">Parliamo del tuo sito <span aria-hidden="true">↗</span></a></div>
+    </div>
+  </section>
+
+  </main>
+  <footer class="site-footer"><div class="section-shell footer-row"><span>© 2026 NovaSignal · Siti web su misura</span><nav aria-label="Navigazione footer"><a href="#progetti">Concept</a><a href="#prezzi">Prezzi</a><a href="#top">Torna in alto ↑</a></nav></div></footer>
   <dialog class="detail" aria-labelledby="detail-title" aria-describedby="detail-body"><p class="dialog-eyebrow">novasignal.it</p><h2 id="detail-title"></h2><p id="detail-body"></p><div id="detail-steps"></div><a class="pill primary dialog-contact" href="https://wa.me/393206891014?text=Ciao%20NovaSignal%2C%20vorrei%20un%E2%80%99anteprima%20gratuita%20del%20sito%20per%20la%20mia%20attivit%C3%A0." target="_blank" rel="noopener noreferrer">Richiedi l’anteprima su WhatsApp ↗</a><p class="dialog-note">Si apre una chat. Il messaggio lo invii tu.</p><form method="dialog"><button class="close-detail" value="close">Torna al sito</button></form></dialog>
   <script>
   (() => {
@@ -355,6 +536,60 @@
       if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) dialog.close();
     }});
     dialog.addEventListener('close', () => dialogOpener?.focus());
+
+    // Sticky panels use native scrolling. JS owns only their scale and inner
+    // preview offset, derived afresh from stable document geometry each frame.
+    const stack = document.querySelector('.project-stack');
+    const projects = Array.from(stack.querySelectorAll('.project'));
+    const stackMotion = matchMedia('(min-width:900px) and (min-height:640px) and (prefers-reduced-motion:no-preference)');
+    let stackGeometry = [], scrollFrame = 0;
+    const clamp = value => Math.min(1, Math.max(0, value));
+    function measureStack() {
+      const stackTop = stack.getBoundingClientRect().top + scrollY;
+      let naturalTop = stackTop;
+      stackGeometry = projects.map((panel, index) => {
+        const height = panel.offsetHeight;
+        const item = {
+          top: naturalTop, pin: 64 + index * 16, height,
+          surface: panel.querySelector('.project-surface'),
+          preview: panel.querySelector('.browser-demo')
+        };
+        // Sticky offsets vary while scrolling; sum untransformed flow sizes.
+        naturalTop += height + parseFloat(getComputedStyle(panel).marginBottom);
+        return item;
+      });
+      requestStackFrame();
+    }
+    function renderStack() {
+      scrollFrame = 0;
+      const enabled = stackMotion.matches;
+      // All reads precede writes; CSS sticky remains the sole owner of pinning.
+      const states = stackGeometry.map((item, index) => {
+        const next = stackGeometry[index + 1];
+        const cover = enabled && next ? clamp((scrollY + item.pin + item.height - next.top) / item.height) : 0;
+        const arrival = enabled ? clamp((scrollY + innerHeight - item.top) / (innerHeight + item.height)) : .5;
+        const focusInside = projects[index].contains(document.activeElement);
+        return {item, cover:focusInside ? 0 : cover, arrival, covered:enabled && cover > .97 && !focusInside};
+      });
+      states.forEach(({item, cover, arrival, covered}, index) => {
+        item.surface.style.transform = enabled ? `scale(${1 - cover * .045})` : '';
+        item.preview.style.setProperty('--demo-y', enabled ? `${(arrival - .5) * -20}px` : '0px');
+        // Covered CTA links must not remain keyboard targets beneath the next card.
+        projects[index].inert = covered;
+      });
+    }
+    function requestStackFrame() {
+      if (!scrollFrame) scrollFrame = requestAnimationFrame(renderStack);
+    }
+    addEventListener('scroll', requestStackFrame, {passive:true});
+    addEventListener('resize', measureStack);
+    addEventListener('pageshow', measureStack);
+    document.addEventListener('focusin', requestStackFrame);
+    document.addEventListener('focusout', requestStackFrame);
+    stackMotion.addEventListener('change', measureStack);
+    if ('ResizeObserver' in window) new ResizeObserver(measureStack).observe(stack);
+    document.fonts.ready.then(measureStack);
+    measureStack();
 
     // One coordinated entrance on the shared document timeline; never restarted
     // on resize, tab visibility, or a later motion-preference change.
